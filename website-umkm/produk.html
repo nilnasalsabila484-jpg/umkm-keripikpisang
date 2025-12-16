@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk - Keripik Pisang Nusantara</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff9e6; /* kuning lembut */
+        }
+        .navbar, footer {
+            background-color: #5a3b1e !important; /* coklat */
+        }
+        h2, h3 {
+            color: #5a3b1e;
+            margin-top: 30px;
+        }
+        .table thead {
+            background-color: #5a3b1e;
+            color: white;
+        }
+        .card {
+            border: 2px solid #f0c040;
+        }
+        .btn-kuning {
+            background-color: #f0c040;
+            color: #5a3b1e;
+            font-weight: bold;
+        }
+        .btn-kuning:hover {
+            background-color: #e0b030;
+        }
+        footer {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/logo.webp" alt="Logo" width="40" class="me-2">
+            Keripik Pisang Nusantara
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index2.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-4">
+    <h2 class="text-center">Produk Unggulan Kami</h2>
+    <p class="text-center">Keripik pisang berkualitas dengan berbagai varian rasa</p>
+
+    <!-- Tabel Produk -->
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Produk</th>
+                <th>Berat</th>
+                <th>Harga</th>
+                <th>Varian Rasa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Keripik Pisang Original</td>
+                <td>200 g</td>
+                <td>Rp 15.000</td>
+                <td>Original</td>
+            </tr>
+            <tr>
+                <td>Keripik Pisang Cokelat</td>
+                <td>200 g</td>
+                <td>Rp 18.000</td>
+                <td>Manis</td>
+            </tr>
+            <tr>
+                <td>Keripik Pisang Balado</td>
+                <td>200 g</td>
+                <td>Rp 17.000</td>
+                <td>Pedas</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="bg-light">Semua harga sudah termasuk PPN</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Card Produk -->
+    <div class="row g-4 my-4">
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/images1.jpg" class="card-img-top" alt="Keripik Pisang Original">
+                <div class="card-body">
+                    <h5 class="card-title">Keripik Pisang Original</h5>
+                    <p class="card-text">Renyah dan gurih, cocok untuk semua usia.</p>
+                    <a href="#" class="btn btn-kuning btn-beli">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/images2.jpg" class="card-img-top" alt="Keripik Pisang Cokelat">
+                <div class="card-body">
+                    <h5 class="card-title">Keripik Pisang Cokelat</h5>
+                    <p class="card-text">Manis cokelat lezat dengan tekstur renyah.</p>
+                    <a href="#" class="btn btn-kuning btn-beli">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img src="images/images3.webp" class="card-img-top" alt="Keripik Pisang Balado">
+                <div class="card-body">
+                    <h5 class="card-title">Keripik Pisang Balado</h5>
+                    <p class="card-text">Pedas manis khas Nusantara yang menggugah selera.</p>
+                    <a href="#" class="btn btn-kuning btn-beli">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <!-- Layanan -->
+    <h3>Layanan Unggulan</h3>
+    <ul>
+        <li>Gratis Ongkir</li>
+        <li>Bayar di Tempat (COD)</li>
+        <li>Garansi Produk</li>
+    </ul>
+
+    <!-- Form Pemesanan -->
+    <h3>Form Pemesanan</h3>
+    <form onsubmit="return cekForm()" class="w-50">
+        <input type="text" id="namaProduk" placeholder="Nama Produk" class="form-control mb-2">
+        <input type="number" id="jumlah" placeholder="Jumlah" class="form-control mb-2">
+        <button type="submit" class="btn btn-success">Pesan</button>
+    </form>
+
+    <!-- Audio & Video -->
+    <h3 class="mt-4">Cerita & Proses Pembuatan</h3>
+    <audio controls class="me-3">
+        <source src="audio/ceritakeripikpisang.mp3" type="audio/mpeg">
+    </audio>
+    <video width="320" height="240" controls class="mt-3">
+        <source src="video/prosespembuatan.mp4" type="video/mp4">
+    </video>
+</main>
+
+<footer class="text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2025 Keripik Pisang Nusantara</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(function(){
+        $('.btn-beli').click(function(e){
+            e.preventDefault();
+            alert('Terima kasih, pesanan Anda akan segera diproses!');
+        });
+    });
+
+    function cekForm() {
+        let nama = document.getElementById('namaProduk').value;
+        let jumlah = document.getElementById('jumlah').value;
+
+        if (nama === '' || jumlah === '') {
+            alert('Semua kolom wajib diisi');
+            return false;
+        }
+        if (jumlah <= 0) {
+            alert('Jumlah harus lebih dari 0');
+            return false;
+        }
+        alert('Pemesanan berhasil dikirim!');
+        return true;
+    }
+</script>
+</body>
+</html>
